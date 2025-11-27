@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@plugin "daisyui" {
+    themes: light ---default;
+}
+@plugin "daisyui/theme" {
+    name: "light";
+    color-scheme: light;
+    default: true;
+
+    --color-primary: #374151;
+    --color-primary-content: #f1f5f9;
+
+    --color-secondary: #065f46;
+    --color-secondary-content: #f1f5f9;
+
+    --color-accent: #3358d3;
+    --color-accent-content: #f1f5f9;
+
+    --color-info: #f161cb;
+    --color-info-content: #242f39;
+
+    --color-warning: #ffc107;
+    --color-warning-content: #242f39;
+
+    --color-success: #33d37b;
+    --color-success-content: #242f39;
+
+    --color-error: #ef4444;
+    --color-error-content: #f1f5f9;
+
+    --color-neutral: #191e24;
+    --color-neutral-content: #cbd1de;
+}
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    color-scheme: dark;
+
+    --color-primary: #374151;
+    --color-primary-content: #f1f5f9;
+
+    --color-secondary: #4e7c13;
+    --color-secondary-content: #cbd1de;
+
+    --color-accent: #3358d3;
+    --color-accent-content: #cbd1de;
+
+    --color-neutral: #191e24;
+    --color-neutral-content: #cbd1de;
+
+    --color-info: #f161cb;
+    --color-info-content: #242f39;
+
+    --color-success: #33d37b;
+    --color-success-content: #f1f5f9;
+
+    --color-warning: #ffc107;
+    --color-warning-content: #242f39;
+
+    --color-error: #ef4444;
+    --color-error-content: #242f39;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
